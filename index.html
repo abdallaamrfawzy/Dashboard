@@ -7,6 +7,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -202,7 +203,7 @@
                 <!-- Sales Details Section -->
                 <div class="bg-white p-4 shadow-md rounded-lg mb-4 w-[1160px]">
                     <h2 class="text-lg font-medium mb-4">Sales Details</h2>
-                    <!-- <img src="./assets/sales-chart.png" alt="Sales Chart"> -->
+                    <canvas id="salesChart"></canvas>
                 </div>
             
                 <!-- Recent Portals Section -->
