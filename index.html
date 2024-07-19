@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="sidebar bg-white w-64 shadow-md flex flex-col justify-between">
+            <div>
+                <div class="p-4">
+                    <img src="./assets/logo.png" alt="logo" class="mx-auto">
+                </div>
+                <nav class="mt-5 flex flex-col items-center gap-1">
+                    <a href="#" class="flex items-center gap-4 p-4 active">
+                        <img src="./assets/Dashboard.png" alt="dashboard" />
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-4 p-4">
+                        <img src="./assets/Subscriptions.png" alt="Subscriptions" />
+                        <span>Subscriptions</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-4 p-4">
+                        <img src="./assets/Clients.png" alt="Clients">
+                        <span>Clients</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-4 p-4">
+                        <img src="./assets/Domains.png" alt="Domains">
+                        <span>Domains</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-4 p-4">
+                        <img src="./assets//Statistics.png" alt="Statistics">
+                        <span>Statistics</span>
+                    </a>
+                </nav>
+                <hr class="my-2">
+                <div class="flex flex-col items-center gap-4 relative">
+                    <span class="absolute top-2 left-5 text-xs font-semibold setting">Website Settings</span>
+                    
+                    <nav class="flex flex-col items-center gap-2 mt-8">
+                        <a href="#" class="flex items-center gap-4 p-4 hover:bg-gray-100 rounded-md">
+                            <img src="./assets/seo.png" alt="SEO">
+                            <span>SEO</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-4 p-4 hover:bg-gray-100 rounded-md">
+                            <img src="./assets/Knowledge.png" alt="Knowledge">
+                            <span>Knowledge base</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-4 p-4 hover:bg-gray-100 rounded-md">
+                            <img src="./assets/Communications.png" alt="Communications">
+                            <span>Communications</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <hr class="my-2">
+            <div class="mb-4">
+                <a href="#" class="flex items-center gap-4 p-4">
+                    <span class="material-icons-outlined mr-3">settings</span>
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="flex items-center gap-4 p-4">
+                    <span class="material-icons-outlined mr-3">power_settings_new</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Header -->
+            <header class="bg-white shadow-md p-4 flex justify-between items-center">
+                <div>
+                    <img src="./assets/menu.png" alt="menu" class="w-[30px] cursor-pointer">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- Language Dropdown -->
+                    <div class="relative">
+                        <div class="flex items-center space-x-2 cursor-pointer" onclick="toggleDropdown()">
+                            <img src="https://flagcdn.com/16x12/gb.png" alt="English" class="h-4" />
+                            <span>English</span>
+                            <span class="material-icons-outlined">expand_more</span>
+                        </div>
+                        <div id="languageDropdown" class="absolute right-0 mt-2 w-32 bg-white border rounded shadow-md hidden">
+                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100">
+                                <img src="https://flagcdn.com/16x12/se.png" alt="Swedish" class="h-4" />
+                                <span>Swedish</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="material-icons-outlined">account_circle</span>
+                        <div>
+                            <span class="block text-gray-700">Ali A</span>
+                            <span class="block text-xs text-gray-500">Super Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Content -->
+            <main class="p-4 flex-1 overflow-y-auto">
+                <div class="grid grid-cols-4 gap-4 mb-4">
+                    <div class="bg-white p-4 shadow-md rounded-lg">
+                        <h2 class="text-lg font-medium">Total Users</h2>
+                        <p class="text-2xl font-bold">40,689</p>
+                        <p class="text-green-500">8.5% Up from yesterday</p>
+                    </div>
+                    <div class="bg-white p-4 shadow-md rounded-lg">
+                        <h2 class="text-lg font-medium">Upgraded</h2>
+                        <p class="text-2xl font-bold">10,293</p>
+                        <p class="text-green-500">1.3% Up from past week</p>
+                    </div>
+                    <div class="bg-white p-4 shadow-md rounded-lg">
+                        <h2 class="text-lg font-medium">Total Sales</h2>
+                        <p class="text-2xl font-bold">89,000 SEK</p>
+                        <p class="text-red-500">4.3% Down from yesterday</p>
+                    </div>
+                    <div class="bg-white p-4 shadow-md rounded-lg">
+                        <h2 class="text-lg font-medium">Total Portals</h2>
+                        <p class="text-2xl font-bold">2040</p>
+                        <p class="text-green-500">1.8% Up from yesterday</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 shadow-md rounded-lg mb-4">
+                    <h2 class="text-lg font-medium mb-4">Sales Details</h2>
+                    <!-- <img src="./assets/sales-chart.png" alt="Sales Chart"> -->
+                </div>
+                <div class="bg-white p-4 shadow-md rounded-lg">
+                    <h2 class="text-lg font-medium mb-4">Recent Portals</h2>
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr>
+                                <th class="border-b p-2">Client</th>
+                                <th class="border-b p-2">Account Type</th>
+                                <th class="border-b p-2">Plan</th>
+                                <th class="border-b p-2">Subdomain</th>
+                                <th class="border-b p-2">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border-b p-2">Växjö Kommun</td>
+                                <td class="border-b p-2">Free</td>
+                                <td class="border-b p-2">Basic</td>
+                                <td class="border-b p-2">OPStreams</td>
+                                <td class="border-b p-2">
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md">Visit</button>
+                                    <button class="bg-red-500 text-white px-4 py-2 rounded-md">Settings</button>
+                                </td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('languageDropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('languageDropdown');
+            const trigger = dropdown.previousElementSibling;
+
+            if (!trigger.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
