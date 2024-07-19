@@ -1,24 +1,4 @@
-.sidebar a.active span {
-    color: white;
-}
-
-.sidebar a.active {
-    background-color: #4880FF;
-}
-
-.sidebar a:hover {
-    background-color: #4880FF;
-}
-
-.sidebar a:hover span,
-.sidebar a:hover img {
+.sidebar a:hover span,.sidebar a:hover img {
     color: white;
     filter: brightness(0) invert(1);
-}
-
-.setting {
-    color: #202224;
-}
-.content {
-    background-color: #F5F6FA;
 }
