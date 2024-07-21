@@ -20,57 +20,58 @@
                 </div>
                 <nav class="mt-5 flex flex-col items-center gap-1">
                     <a href="#"
-                        class="group flex items-center gap-4 bg-[#4880FF] hover:bg-[#4880FF] p-4 active w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                        <div class="bg-blue-500 rounded h-12 w-2 relative right-[2.8rem]"></div>
+                        class="group flex items-center gap-4 bg-[#4880FF] hover:bg-[#4880FF]  active w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center ">
+                        <div class="bg-blue-500 rounded h-12 w-2 relative right-[1.8rem]"></div>
                         <img src="./assets/Dashboard.png" alt="dashboard"
                             class="group-hover:brightness-0 group-hover:invert" />
-                        <span class="text-white group-hover:text-white">Dashboard</span>
+                        <span class="text-white group-hover:text-white" data-i18n="dashboard">Dashboard</span>
                     </a>
                     <a href="#"
                         class="group flex items-center gap-4 p-4 w-[12.8rem] mx-auto hover:bg-[#4880FF] rounded-md h-12 relative flex items-center pl-4">
                         <img src="./assets/Subscriptions.png" alt="Subscriptions"
                             class="group-hover:brightness-0 group-hover:invert" />
-                        <span class="group-hover:text-white">Subscriptions</span>
+                        <span class="group-hover:text-white" data-i18n="subscriptions">Subscriptions</span>
                     </a>
                     <a href="#"
                         class="group flex items-center gap-4 p-4 w-[12.8rem] mx-auto hover:bg-[#4880FF] rounded-md h-12 relative flex items-center pl-4">
                         <img src="./assets/Clients.png" alt="Clients"
                             class="group-hover:brightness-0 group-hover:invert" />
-                        <span class="group-hover:text-white">Clients</span>
+                        <span class="group-hover:text-white" data-i18n="clients">Clients</span>
                     </a>
                     <a href="#"
                         class="group flex items-center gap-4 p-4 w-[12.8rem] mx-auto hover:bg-[#4880FF] rounded-md h-12 relative flex items-center pl-4">
                         <img src="./assets/Domains.png" alt="Domains"
                             class="group-hover:brightness-0 group-hover:invert" />
-                        <span class="group-hover:text-white">Domains</span>
+                        <span class="group-hover:text-white" data-i18n="domains">Domains</span>
                     </a>
                     <a href="#"
                         class="group flex items-center gap-4 p-4 w-[12.8rem] mx-auto hover:bg-[#4880FF] rounded-md h-12 relative flex items-center pl-4">
                         <img src="./assets/Statistics.png" alt="Statistics"
                             class="group-hover:brightness-0 group-hover:invert" />
-                        <span class="group-hover:text-white">Statistics</span>
+                        <span class="group-hover:text-white" draggable="statistics">Statistics</span>
                     </a>
                 </nav>
                 <hr class="my-2">
                 <div class="flex flex-col items-center gap-4 relative">
-                    <span class="absolute top-2 left-5 text-xs font-semibold text-[#202224]">Website Settings</span>
+                    <span class="absolute top-2 left-5 text-xs font-semibold text-[#202224]"
+                        data-i18n="websiteSettings">Website Settings</span>
                     <nav class="flex flex-col items-center gap-2 mt-8">
                         <a href="#"
                             class="group flex items-center gap-4 hover:bg-[#4880FF] p-4 rounded-md w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
                             <img src="./assets/seo.png" alt="SEO" class="group-hover:brightness-0 group-hover:invert" />
-                            <span class="group-hover:text-white">SEO</span>
+                            <span class="group-hover:text-white" data-i18n="SEO">SEO</span>
                         </a>
                         <a href="#"
                             class="group flex items-center gap-4 hover:bg-[#4880FF] p-4 rounded-md w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
                             <img src="./assets/Knowledge.png" alt="Knowledge"
                                 class="group-hover:brightness-0 group-hover:invert" />
-                            <span class="group-hover:text-white">Knowledge base</span>
+                            <span class="group-hover:text-white" data-i18n="knowledgeBase">Knowledge base</span>
                         </a>
                         <a href="#"
                             class="group flex items-center gap-4 hover:bg-[#4880FF] p-4 rounded-md w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
                             <img src="./assets/Communications.png" alt="Communications"
                                 class="group-hover:brightness-0 group-hover:invert" />
-                            <span class="group-hover:text-white">Communications</span>
+                            <span class="group-hover:text-white" data-i18n="communications">Communications</span>
                         </a>
                     </nav>
                 </div>
@@ -80,12 +81,12 @@
                 <a href="#"
                     class="group flex items-center gap-4 p-4 hover:bg-[#4880FF] w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
                     <span class="material-icons-outlined mr-3 group-hover:text-white">settings</span>
-                    <span class="group-hover:text-white">Settings</span>
+                    <span class="group-hover:text-white" data-i18n="settings">Settings</span>
                 </a>
                 <a href="#"
                     class="group flex items-center gap-4 p-4 hover:bg-[#4880FF] w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
                     <span class="material-icons-outlined mr-3 group-hover:text-white">power_settings_new</span>
-                    <span class="group-hover:text-white">Logout</span>
+                    <span class="group-hover:text-white" data-i18n="logout">Logout</span>
                 </a>
             </div>
         </div>
@@ -99,19 +100,27 @@
                 <div class="flex items-center gap-[2rem]">
                     <!-- Language Dropdown -->
                     <div class="relative">
-                        <div class="flex items-center space-x-2 cursor-pointer" onclick="toggleDropdown()">
-                            <img src="https://flagcdn.com/16x12/gb.png" alt="English" class="h-4" />
-                            <span>English</span>
+                        <div class="flex items-center space-x-2 cursor-pointer" onclick="toggleDropdown()"
+                            id="languageTrigger">
+                            <img src="https://flagcdn.com/16x12/gb.png" alt="English" class="h-4" id="currentFlag" />
+                            <span id="currentLanguage">English</span>
                             <span class="material-icons-outlined">expand_more</span>
                         </div>
                         <div id="languageDropdown"
                             class="absolute right-0 mt-2 w-32 bg-white border rounded shadow-md hidden">
-                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100">
+                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100"
+                                onclick="changeLanguage('Swedish', 'https://flagcdn.com/16x12/se.png')">
                                 <img src="https://flagcdn.com/16x12/se.png" alt="Swedish" class="h-4" />
                                 <span>Swedish</span>
                             </a>
+                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100"
+                                onclick="changeLanguage('English', 'https://flagcdn.com/16x12/gb.png')">
+                                <img src="https://flagcdn.com/16x12/gb.png" alt="English" class="h-4" />
+                                <span>English</span>
+                            </a>
                         </div>
                     </div>
+
                     <div class="flex items-center gap-3">
                         <span class="material-icons-outlined">account_circle</span>
                         <div>
@@ -124,7 +133,7 @@
             </header>
             <!-- Content -->
             <main class="p-4 flex-1 overflow-y-auto bg-[#F5F6FA] flex flex-col gap-3">
-                <span class="text-[32px] font-medium">Dashboard</span>
+                <span class="text-[32px] font-medium" data-i18n="dashboard">Dashboard</span>
                 <!-- Cards -->
                 <div class="grid grid-cols-4 mb-4 flex justify-between items-center">
                     <!-- Total Users Card -->
@@ -132,7 +141,7 @@
                         class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-[262px] h-[161px]">
                         <div class="flex items-center justify-between">
                             <div class="flex flex-col gap-[1rem]">
-                                <h2 class="text-[16px] text-[#202224]">Total Users</h2>
+                                <h2 class="text-[16px] text-[#202224]" data-i18n="totalUsers">Total Users</h2>
                                 <p class="text-2xl font-bold">40,689</p>
                             </div>
                             <img src="./assets/users.png" alt="" class="w-16 h-16">
@@ -150,7 +159,7 @@
                         class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-[262px] h-[161px]">
                         <div class="flex items-center justify-between">
                             <div class="flex flex-col gap-[1rem]">
-                                <h2 class="text-[16px] text-[#202224]">Upgraded</h2>
+                                <h2 class="text-[16px] text-[#202224]" data-i18n="upgraded">Upgraded</h2>
                                 <p class="text-2xl font-bold">10,293</p>
                             </div>
                             <img src="./assets/Upgraded.png" alt="" class="w-16 h-16">
@@ -168,7 +177,7 @@
                         class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between  gap-4 w-[262px] h-[161px]">
                         <div class="flex items-center justify-between">
                             <div class="flex flex-col gap-[1rem]">
-                                <h2 class="text-[16px] text-[#202224]">Total Sales</h2>
+                                <h2 class="text-[16px] text-[#202224]" data-i18n="totalSales">Total Sales</h2>
                                 <p class="text-2xl font-bold">89,000 SEK</p>
                             </div>
                             <img src="./assets/Sales.png" alt="" class="w-16 h-16">
@@ -186,7 +195,7 @@
                         class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-[262px] h-[161px]">
                         <div class="flex items-center justify-between relative">
                             <div class="flex flex-col gap-[1rem]">
-                                <h2 class="text-[16px] text-[#202224]">Total Portals</h2>
+                                <h2 class="text-[16px] text-[#202224]" data-i18n="totalPortals">Total Portals</h2>
                                 <p class="text-2xl font-bold">2040</p>
                             </div>
                             <div class="relative">
@@ -208,20 +217,21 @@
                 <!-- Sales Details Section -->
                 <div class="bg-white p-4 shadow-md rounded-lg mb-4 w-[1160px]">
                     <div class="flex items-center justify-between">
-                        <h2 class="text-lg font-medium mb-4">Sales Details</h2>
-                        <select class="bg-[#FCFDFD] w-[104px] h-[28px] border rounded-md px-1  border-[#000] text-[#2B3034]">
-                            <option value="01">January</option>
-                            <option value="02">February</option>
-                            <option value="03">March</option>
-                            <option value="04">April</option>
-                            <option value="05">May</option>
-                            <option value="06">June</option>
-                            <option value="07">July</option>
-                            <option value="08">August</option>
-                            <option value="09">September</option>
-                            <option value="10">October</option>
-                            <option value="11">November</option>
-                            <option value="12">December</option>
+                        <h2 class="text-lg font-medium mb-4" data-i18n="salesDetails">Sales Details</h2>
+                        <select
+                            class="bg-[#FCFDFD] w-[104px] h-[28px] border rounded-md px-1  border-[#000] text-[#2B3034]">
+                            <option value="01" data-i18n="January">January</option>
+                            <option value="02" data-i18n="February">February</option>
+                            <option value="03" data-i18n="March">March</option>
+                            <option value="04" data-i18n="April">April</option>
+                            <option value="05" data-i18n="May">May</option>
+                            <option value="06" data-i18n="June">June</option>
+                            <option value="07" data-i18n="July">July</option>
+                            <option value="08" data-i18n="August">August</option>
+                            <option value="09" data-i18n="September">September</option>
+                            <option value="10" data-i18n="October">October</option>
+                            <option value="11" data-i18n="November">November</option>
+                            <option value="12" data-i18n="December">December</option>
                         </select>
 
                     </div>
@@ -230,17 +240,17 @@
 
                 <!-- Recent Portals Section -->
                 <div class="bg-white p-4 shadow-md rounded-lg w-[1160px]">
-                    <h2 class="text-[24px] text-[#202224] font-bold mb-4">Recent Portals</h2>
+                    <h2 class="text-[24px] text-[#202224] font-bold mb-4" data-i18n="recentPortals">Recent Portals</h2>
                     <div class="relative overflow-hidden">
                         <table class="w-[98%] mx-auto text-left">
                             <thead class="bg-[#F1F4F9]">
                                 <tr>
-                                    <th class="p-2 px-6 rounded-l-full">Client</th>
-                                    <th class="p-2">Account Type</th>
-                                    <th class="p-2">Plan</th>
-                                    <th class="p-2">Subdomain</th>
-                                    <th class="p-2 rounded-r-full"><span
-                                            class=" absolute right-[5rem] top-[0.6rem]">Actions</span></th>
+                                    <th class="p-2 px-6 rounded-l-full" data-i18n="client">Client</th>
+                                    <th class="p-2" data-i18n="accountType">Account Type</th>
+                                    <th class="p-2" data-i18n="plan">Plan</th>
+                                    <th class="p-2" data-i18n="subdomain">Subdomain</th>
+                                    <th class="p-2 rounded-r-full"><span class=" absolute right-[5rem] top-[0.6rem]"
+                                            data-i18n="actions">Actions</span></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -257,10 +267,10 @@
                                     <td class="border-b p-2">Basic</td>
                                     <td class="border-b p-2">OPStreams</td>
                                     <td class="border-b p-2 flex justify-end gap-4">
-                                        <button
-                                            class="bg-[#4880FF] text-white w-[96px] h-[36px] rounded-md">Visit</button>
-                                        <button
-                                            class="bg-[#FF4848] text-white w-[96px] h-[36px] rounded-md">Settings</button>
+                                        <button class="bg-[#4880FF] text-white w-[96px] h-[36px] rounded-md"
+                                            data-i18n="visit">Visit</button>
+                                        <button class="bg-[#FF4848] text-white w-[96px] h-[36px] rounded-md"
+                                            data-i18n="settings">Settings</button>
                                     </td>
                                 </tr>
                             </tbody>

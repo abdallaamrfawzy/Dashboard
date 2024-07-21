@@ -1,3 +1,83 @@
+const pageContent = {
+    English: {
+        dashboard: "Dashboard",
+        subscriptions: "Subscriptions",
+        clients: "Clients",
+        domains: "Domains",
+        statistics: "Statistics",
+        websiteSettings: "Website Settings",
+        seo: "SEO",
+        knowledgeBase: "Knowledge base",
+        communications: "Communications",
+        settings: "Settings",
+        logout: "Logout",
+        totalUsers: "Total Users",
+        upgraded: "Upgraded",
+        totalSales: "Total Sales",
+        totalPortals: "Total Portals",
+        salesDetails: "Sales Details",
+        recentPortals: "Recent Portals",
+        client: "Client",
+        accountType: "Account Type",
+        plan: "Plan",
+        subdomain: "Subdomain",
+        actions: "Actions",
+        visit: "Visit",
+        January: "January",
+        February: "February",
+        March: "March",
+        April: "April",
+        May: "May",
+        June: "June",
+        July: "July",
+        August: "August",
+        September: "September",
+        October: "October",
+        November: "November",
+        December: "December"
+    },
+    Swedish: {
+        dashboard: "Instrumentbräda",
+        subscriptions: "Prenumerationer",
+        clients: "Kunder",
+        domains: "Domäner",
+        statistics: "Statistik",
+        websiteSettings: "Webbplatsinställningar",
+        seo: "SEO",
+        knowledgeBase: "Kunskapsbas",
+        communications: "Kommunikationer",
+        settings: "Inställningar",
+        logout: "Logga ut",
+        totalUsers: "Totalt antal användare",
+        upgraded: "Uppgraderad",
+        totalSales: "Total försäljning",
+        totalPortals: "Totala portaler",
+        salesDetails: "Försäljningsdetaljer",
+        recentPortals: "Nya portaler",
+        client: "Klient",
+        accountType: "Kontotyp",
+        plan: "Plan",
+        subdomain: "Subdomän",
+        actions: "Åtgärder",
+        free: "Gratis",
+        basic: "Grundläggande",
+        visit: "Besök",
+        January: "Januari",
+        February: "Februari",
+        March: "Mars",
+        April: "April",
+        May: "Maj",
+        June: "Juni",
+        July: "Juli",
+        August: "Augusti",
+        September: "September",
+        October: "Oktober",
+        November: "November",
+        December: "December"
+    }
+};
+
+
 function toggleDropdown() {
     const dropdown = document.getElementById('languageDropdown');
     dropdown.classList.toggle('hidden');
@@ -11,6 +91,20 @@ document.addEventListener('click', function (event) {
         dropdown.classList.add('hidden');
     }
 });
+
+function changeLanguage(language, flagUrl) {
+    const currentLanguage = document.getElementById('currentLanguage');
+    const currentFlag = document.getElementById('currentFlag');
+
+    currentLanguage.textContent = language;
+    currentFlag.src = flagUrl;
+    document.getElementById('languageDropdown').classList.add('hidden');
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        element.textContent = pageContent[language][key];
+    })
+}
 
 const ctx = document.getElementById('salesChart').getContext('2d');
 
