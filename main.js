@@ -210,17 +210,6 @@ function sidebar() {
     })
 }
 
-
-function toggleLanguageDropdown() {
-    document.getElementById('languageDropdown').classList.toggle('hidden');
-}
-
 function toggleAccountDropdown() {
     document.getElementById('accountDropdown').classList.toggle('hidden');
-}
-
-function changeLanguage(language, flagSrc) {
-    document.getElementById('currentLanguage').textContent = language;
-    document.getElementById('currentFlag').src = flagSrc;
-    toggleLanguageDropdown();
 }
