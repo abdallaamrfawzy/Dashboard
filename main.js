@@ -184,7 +184,7 @@ function sidebar() {
     const links = document.querySelector(".sidebar a");
     const sidebar = document.querySelector(".sidebar");
     const img = document.querySelectorAll(".sidebar a img");
-    const indicator = document.querySelectorAll(".sidebar .indicator")
+    const indicator = document.querySelectorAll(".sidebar .indicator");
     linksText.forEach((link) => {
         if(link.classList.value.includes("hidden")){
             link.classList.remove("hidden");
