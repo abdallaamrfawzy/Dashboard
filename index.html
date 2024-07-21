@@ -144,34 +144,34 @@
                 <div class="flex items-center gap-[2rem]">
                     <!-- Language Dropdown -->
                     <div class="relative">
-                        <div class="flex items-center space-x-2 cursor-pointer" onclick="toggleDropdown()"
-                            id="languageTrigger">
-                            <img src="https://flagcdn.com/16x12/gb.png" alt="English" class="h-4" id="currentFlag" />
+                        <div class="flex items-center space-x-2 cursor-pointer" onclick="toggleLanguageDropdown()" id="languageTrigger">
+                            <img src="./assets/england.png" alt="English" class="h-4" id="currentFlag" />
                             <span id="currentLanguage">English</span>
                             <span class="material-icons-outlined">expand_more</span>
                         </div>
-                        <div id="languageDropdown"
-                            class="absolute right-0 mt-2 w-32 bg-white border rounded shadow-md hidden">
-                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100"
-                                onclick="changeLanguage('Swedish', 'https://flagcdn.com/16x12/se.png')">
-                                <img src="https://flagcdn.com/16x12/se.png" alt="Swedish" class="h-4" />
+                        <div id="languageDropdown" class="absolute right-0 mt-2 w-32 bg-white border rounded shadow-md hidden">
+                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100" onclick="changeLanguage('Swedish', './assets/Swedish.png')">
+                                <img src="./assets/Swedish.png" alt="Swedish" class="h-4" />
                                 <span>Swedish</span>
                             </a>
-                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100"
-                                onclick="changeLanguage('English', 'https://flagcdn.com/16x12/gb.png')">
-                                <img src="https://flagcdn.com/16x12/gb.png" alt="English" class="h-4" />
+                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100" onclick="changeLanguage('English', './assets/england.png')">
+                                <img src="./assets/england.png" alt="English" class="h-4" />
                                 <span>English</span>
                             </a>
                         </div>
                     </div>
-
-                    <div class="flex items-center gap-3">
+                
+                    <div class="relative flex items-center gap-3">
                         <span class="material-icons-outlined">account_circle</span>
                         <div>
                             <span class="block text-gray-700">Ali A</span>
                             <span class="block text-xs text-gray-500">Super Admin</span>
                         </div>
-                        <span class="material-icons-outlined cursor-pointer">expand_more</span>
+                        <span class="material-icons-outlined cursor-pointer" onclick="toggleAccountDropdown()">expand_more</span>
+                        <div id="accountDropdown" class="absolute right-2 top-10 w-32 bg-white border rounded shadow-md hidden">
+                            <a href="#" class="block p-2 hover:bg-gray-100">Settings</a>
+                            <a href="#" class="block p-2 hover:bg-gray-100">Logout</a>
+                        </div>
                     </div>
                 </div>
             </header>
