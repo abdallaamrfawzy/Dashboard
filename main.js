@@ -113,7 +113,7 @@ const salesChart = new Chart(ctx, {
     data: {
         labels: ['5k', '10k', '15k', '20k', '25k', '30k', '35k', '40k', '45k', '50k', '55k', '60k'],
         datasets: [{
-            label: 'Sales Details',
+            label: '', 
             data: [30, 45, 50, 64, 55, 50, 45, 60, 55, 50, 45, 50],
             borderColor: '#4379EE',
             borderWidth: 2,
@@ -149,6 +149,9 @@ const salesChart = new Chart(ctx, {
             }
         },
         plugins: {
+            legend: {
+                display: false
+            },
             tooltip: {
                 callbacks: {
                     label: function (context) {
@@ -159,6 +162,7 @@ const salesChart = new Chart(ctx, {
         },
     },
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -175,3 +179,33 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+function sidebar() {
+    const linksText = document.querySelectorAll(".sidebar span");
+    const links = document.querySelector(".sidebar a");
+    const sidebar = document.querySelector(".sidebar");
+    const img = document.querySelectorAll(".sidebar a img");
+    const indicator = document.querySelectorAll(".sidebar .indicator")
+    linksText.forEach((link) => {
+        if(link.classList.value.includes("hidden")){
+            link.classList.remove("hidden");
+            sidebar.classList.remove("w-[5%]");
+            links.classList.remove("justify-center");
+            indicator.forEach((div)=>{
+                div.classList.remove("left-[-20%]");
+            })
+            img.forEach((img)=>{
+                img.classList.remove("ml-1");
+            })
+        }else{
+            link.classList.add("hidden");
+            sidebar.classList.add("w-[5%]");
+            links.classList.add("justify-center");
+            indicator.forEach((div)=>{
+                div.classList.add("left-[-20%]");
+            })
+            img.forEach((img)=>{
+                img.classList.add("ml-1");
+            })
+        }
+    })
+}
