@@ -160,3 +160,18 @@ const salesChart = new Chart(ctx, {
     },
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                link.querySelector('.indicator').classList.add('hidden');
+            });
+
+            this.classList.add('active');
+            this.querySelector('.indicator').classList.remove('hidden');
+        });
+    });
+});
