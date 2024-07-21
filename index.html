@@ -14,6 +14,10 @@
             color: white;
         }
 
+        .nav-link img {
+            filter: brightness(10) invert(1);
+        }
+
         .nav-link.active img {
             filter: brightness(0) invert(1);
         }
@@ -35,35 +39,44 @@
                 <nav class="mt-5 flex flex-col items-center gap-1">
                     <a href="#" id="dashboard"
                         class="active nav-link group flex items-center p-4 hover:bg-[#4880FF] gap-4 w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center">
-                        <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem]"></div>
+                        <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem]">
+                        </div>
                         <img src="./assets/Dashboard.png" alt="dashboard"
                             class="group-hover:brightness-0 group-hover:invert" />
                         <span class="group-hover:text-white" data-i18n="dashboard">Dashboard</span>
                     </a>
                     <a href="#" id="subscriptions"
                         class="nav-link group flex items-center gap-4 hover:bg-[#4880FF] p-4 w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center">
-                        <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden"></div>
+                        <div
+                            class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden">
+                        </div>
                         <img src="./assets/Subscriptions.png" alt="Subscriptions"
                             class="group-hover:brightness-0 group-hover:invert" />
                         <span class="group-hover:text-white" data-i18n="subscriptions">Subscriptions</span>
                     </a>
                     <a href="#" id="clients"
                         class="nav-link group flex items-center gap-4 hover:bg-[#4880FF] p-6 w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                        <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden"></div>
+                        <div
+                            class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden">
+                        </div>
                         <img src="./assets/Clients.png" alt="Clients"
                             class="group-hover:brightness-0 group-hover:invert" />
                         <span class="group-hover:text-white" data-i18n="clients">Clients</span>
                     </a>
                     <a href="#" id="domains"
                         class="nav-link group flex items-center gap-4 hover:bg-[#4880FF]  p-6 w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                        <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden"></div>
+                        <div
+                            class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden">
+                        </div>
                         <img src="./assets/Domains.png" alt="Domains"
                             class="group-hover:brightness-0 group-hover:invert" />
                         <span class="group-hover:text-white" data-i18n="domains">Domains</span>
                     </a>
                     <a href="#" id="statistics"
                         class="nav-link group flex items-center gap-4 p-6 hover:bg-[#4880FF] w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                        <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden"></div>
+                        <div
+                            class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden">
+                        </div>
                         <img src="./assets/Statistics.png" alt="Statistics"
                             class="group-hover:brightness-0 group-hover:invert" />
                         <span class="group-hover:text-white" data-i18n="statistics">Statistics</span>
@@ -76,20 +89,26 @@
                     <nav class="flex flex-col items-center gap-2 mt-8">
                         <a href="#" id="seo"
                             class="nav-link group flex items-center gap-4 p-6 hover:bg-[#4880FF] w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                            <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden"></div>
+                            <div
+                                class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden">
+                            </div>
                             <img src="./assets/seo.png" alt="SEO" class="group-hover:brightness-0 group-hover:invert" />
                             <span class="group-hover:text-white" data-i18n="seo">SEO</span>
                         </a>
                         <a href="#" id="knowledgeBase"
                             class="nav-link group flex items-center gap-4 p-6 hover:bg-[#4880FF] w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                            <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden"></div>
+                            <div
+                                class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden">
+                            </div>
                             <img src="./assets/Knowledge.png" alt="Knowledge"
                                 class="group-hover:brightness-0 group-hover:invert" />
                             <span class="group-hover:text-white" data-i18n="knowledgeBase">Knowledge base</span>
                         </a>
                         <a href="#" id="communications"
                             class="nav-link group flex items-center gap-4 p-6 hover:bg-[#4880FF] w-[12.8rem] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                            <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden"></div>
+                            <div
+                                class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden">
+                            </div>
                             <img src="./assets/Communications.png" alt="Communications"
                                 class="group-hover:brightness-0 group-hover:invert" />
                             <span class="group-hover:text-white" data-i18n="communications">Communications</span>
@@ -101,20 +120,20 @@
             <div class="mb-4">
                 <a href="#" id="settings"
                     class="nav-link group flex items-center gap-4 p-6 w-[12.8rem] hover:bg-[#4880FF] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                    <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden"></div>
+                    <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden">
+                    </div>
                     <span class="material-icons-outlined mr-3 group-hover:text-white">settings</span>
                     <span class="group-hover:text-white" data-i18n="settings">Settings</span>
                 </a>
                 <a href="#" id="logout"
                     class="nav-link group flex items-center gap-4 p-6 w-[12.8rem] hover:bg-[#4880FF] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                    <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden"></div>
+                    <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-1.8rem] hidden">
+                    </div>
                     <span class="material-icons-outlined mr-3 group-hover:text-white">power_settings_new</span>
                     <span class="group-hover:text-white" data-i18n="logout">Logout</span>
                 </a>
             </div>
         </div>
-
-
         <!-- Main Content -->
         <div class="flex-1 flex flex-col">
             <!-- Header -->
