@@ -1,0 +1,49 @@
+.nav-link.active {
+    background-color: #4880FF;
+    color: white;
+}
+
+.nav-link img {
+    filter: brightness(10) invert(1);
+    width: 20px;
+    height: 20px;     
+}
+
+.nav-link.active img {
+    filter: brightness(0) invert(1);
+    position: relative;
+    left: 1px;
+}
+.nav-link img{
+    position: relative;
+    left: 1px;
+}
+
+.indicator.hidden {
+    display: none;
+}
+
+.sidebar {
+    transition: width 0.3s ease;
+}
+
+.sidebar a {
+    transition: all 0.3s ease;
+}
+
+.sidebar-icon-collapsed {
+    width: 20px;
+    height: 17px;
+}
+
+.logo-collapsed {
+    width: 100px !important;
+    position: relative;
+    right: 11px !important;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 10% !important;
+    }
+}
