@@ -39,7 +39,7 @@
 .sidebar-collapsed .nav-link img {
     margin: 0 auto;
 }
-.sidebar-collapsed .nav-link img:not(.subscriptions, .sidebar-collapsed .nav-link.active img){
+.sidebar-collapsed .nav-link img:not(.subscriptions, .sidebar-collapsed .nav-link.active img.dashboard, .sidebar-collapsed .nav-link img.dashboard){
     position: relative !important;
     left: 18%;
 }

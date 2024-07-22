@@ -194,9 +194,6 @@ function sidebar() {
         link.classList.toggle("hidden");
     });
 
-    links.forEach((link) => {
-        link.classList.toggle("justify-center");
-    });
 
     img.forEach((image) => {
         image.classList.toggle("sidebar-icon-collapsed");
