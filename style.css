@@ -39,6 +39,10 @@
 .sidebar-collapsed .nav-link img {
     margin: 0 auto;
 }
+.sidebar-collapsed .nav-link img:not(.subscriptions, .sidebar-collapsed .nav-link.active img){
+    position: relative !important;
+    left: 18%;
+}
 
 .logo-collapsed {
     width: 100px !important;
