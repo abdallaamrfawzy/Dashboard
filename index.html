@@ -25,6 +25,44 @@
         .indicator.hidden {
             display: none;
         }
+
+        .sidebar {
+            transition: width 0.3s ease;
+        }
+        .sidebar a {
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-icon-collapsed {
+            width: 22px;
+            height: 22px;
+            margin: 0 auto;
+        }
+
+        .logo-collapsed {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 640px) {
+            .sidebar-icon-collapsed {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar-icon-collapsed {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .sidebar{
+                width: 10% !important;
+            }
+        }
     </style>
 </head>
 
@@ -33,7 +71,7 @@
         <!-- Sidebar -->
         <div class="sidebar relative bg-white w-[17.1%] shadow-md flex flex-col justify-between">
             <div>
-                <div class="p-4 w-full ">
+                <div class="p-4 w-full logo">
                     <img src="./assets/logo.png" alt="logo" class="mx-auto w-full">
                 </div>
                 <nav class="mt-5 flex flex-col items-center gap-1">
@@ -47,8 +85,7 @@
                     </a>
                     <a href="#" id="subscriptions"
                         class="nav-link group flex items-center gap-4 hover:bg-[#4880FF] p-4 w-[80%] mx-auto rounded-md h-12 relative flex items-center">
-                        <div
-                            class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-14%] hidden">
+                        <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-14%] hidden">
                         </div>
                         <img src="./assets/Subscriptions.png" alt="Subscriptions"
                             class="group-hover:brightness-0 group-hover:invert" />
@@ -56,8 +93,7 @@
                     </a>
                     <a href="#" id="clients"
                         class="nav-link group flex items-center gap-4 hover:bg-[#4880FF] p-6 w-[80%] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                        <div
-                            class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-14%] hidden">
+                        <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-14%] hidden">
                         </div>
                         <img src="./assets/Clients.png" alt="Clients"
                             class="group-hover:brightness-0 group-hover:invert" />
@@ -65,8 +101,7 @@
                     </a>
                     <a href="#" id="domains"
                         class="nav-link group flex items-center gap-4 hover:bg-[#4880FF]  p-6 w-[80%] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                        <div
-                            class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-14%] hidden">
+                        <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-14%] hidden">
                         </div>
                         <img src="./assets/Domains.png" alt="Domains"
                             class="group-hover:brightness-0 group-hover:invert" />
@@ -74,8 +109,7 @@
                     </a>
                     <a href="#" id="statistics"
                         class="nav-link group flex items-center gap-4 p-6 hover:bg-[#4880FF] w-[80%] mx-auto rounded-md h-12 relative flex items-center pl-4">
-                        <div
-                            class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-14%] hidden">
+                        <div class="indicator bg-[#4880FF] bg rounded h-12 w-2 absolute top-[0rem] left-[-14%] hidden">
                         </div>
                         <img src="./assets/Statistics.png" alt="Statistics"
                             class="group-hover:brightness-0 group-hover:invert" />
@@ -144,31 +178,37 @@
                 <div class="flex items-center gap-[2rem]">
                     <!-- Language Dropdown -->
                     <div class="relative">
-                        <div class="flex items-center space-x-2 cursor-pointer" onclick="toggleDropdown()" id="languageTrigger">
+                        <div class="flex items-center space-x-2 cursor-pointer" onclick="toggleDropdown()"
+                            id="languageTrigger">
                             <img src="./assets/england.png" alt="English" class="h-4" id="currentFlag" />
                             <span id="currentLanguage">English</span>
                             <span class="material-icons-outlined">expand_more</span>
                         </div>
-                        <div id="languageDropdown" class="absolute right-0 mt-2 w-32 bg-white border rounded shadow-md hidden z-999">
-                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100" onclick="changeLanguage('Swedish', './assets/Swedish.png')">
+                        <div id="languageDropdown"
+                            class="absolute right-0 mt-2 w-32 bg-white border rounded shadow-md hidden z-999">
+                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100"
+                                onclick="changeLanguage('Swedish', './assets/Swedish.png')">
                                 <img src="./assets/Swedish.png" alt="Swedish" class="h-4" />
                                 <span>Swedish</span>
                             </a>
-                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100" onclick="changeLanguage('English', './assets/england.png')">
+                            <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100"
+                                onclick="changeLanguage('English', './assets/england.png')">
                                 <img src="./assets/england.png" alt="English" class="h-4" />
                                 <span>English</span>
                             </a>
                         </div>
                     </div>
-                
+
                     <div class="relative flex items-center gap-3">
                         <span class="material-icons-outlined">account_circle</span>
                         <div>
                             <span class="block text-gray-700">Ali A</span>
                             <span class="block text-xs text-gray-500">Super Admin</span>
                         </div>
-                        <span class="material-icons-outlined cursor-pointer" onclick="toggleAccountDropdown()">expand_more</span>
-                        <div id="accountDropdown" class="absolute right-2 top-10 w-32 bg-white border rounded shadow-md hidden z-999">
+                        <span class="material-icons-outlined cursor-pointer"
+                            onclick="toggleAccountDropdown()">expand_more</span>
+                        <div id="accountDropdown"
+                            class="absolute right-2 top-10 w-32 bg-white border rounded shadow-md hidden z-999">
                             <a href="#" class="block p-2 hover:bg-gray-100">Settings</a>
                             <a href="#" class="block p-2 hover:bg-gray-100">Logout</a>
                         </div>
@@ -181,8 +221,7 @@
                 <!-- Cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
                     <!-- Total Users Card -->
-                    <div
-                        class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-full h-[161px]">
+                    <div class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-full h-[161px]">
                         <div class="flex items-center justify-between">
                             <div class="flex flex-col gap-[1rem]">
                                 <h2 class="text-[16px] text-[#202224]" data-i18n="totalUsers">Total Users</h2>
@@ -197,10 +236,9 @@
                             </p>
                         </div>
                     </div>
-                
+
                     <!-- Upgraded Card -->
-                    <div
-                        class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-full h-[161px]">
+                    <div class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-full h-[161px]">
                         <div class="flex items-center justify-between">
                             <div class="flex flex-col gap-[1rem]">
                                 <h2 class="text-[16px] text-[#202224]" data-i18n="upgraded">Upgraded</h2>
@@ -215,10 +253,9 @@
                             </p>
                         </div>
                     </div>
-                
+
                     <!-- Total Sales Card -->
-                    <div
-                        class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-full h-[161px]">
+                    <div class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-full h-[161px]">
                         <div class="flex items-center justify-between">
                             <div class="flex flex-col gap-[1rem]">
                                 <h2 class="text-[16px] text-[#202224]" data-i18n="totalSales">Total Sales</h2>
@@ -233,7 +270,7 @@
                             </p>
                         </div>
                     </div>
-                
+
                     <!-- Total Portals Card -->
                     <div
                         class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-full h-[161px] ">
@@ -256,7 +293,7 @@
                         </div>
                     </div>
                 </div>
-                
+
 
                 <!-- Sales Details Section -->
                 <div class="bg-white p-4 shadow-md rounded-lg mb-4">

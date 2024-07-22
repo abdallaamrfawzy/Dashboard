@@ -181,28 +181,57 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 function sidebar() {
     const linksText = document.querySelectorAll(".sidebar span");
-    const links = document.querySelector(".sidebar a");
+    const links = document.querySelectorAll(".sidebar a");
     const sidebar = document.querySelector(".sidebar");
     const img = document.querySelectorAll(".sidebar a img");
     const indicator = document.querySelectorAll(".sidebar .indicator");
+    const logo = document.querySelector(".sidebar .logo");
+
+    sidebar.classList.toggle("sidebar-collapsed");
+    sidebar.classList.toggle("w-[5%]");
+    
     linksText.forEach((link) => {
-        if(link.classList.value.includes("hidden")){
-            link.classList.remove("hidden");
-            sidebar.classList.remove("w-[5%]");
-            links.classList.remove("justify-center");
-            indicator.forEach((div)=>{
-                div.classList.remove("left-[-20%]");
-            })
-        }else{
-            link.classList.add("hidden");
-            sidebar.classList.add("w-[5%]");
-            links.classList.add("justify-center");
-            indicator.forEach((div)=>{
-                div.classList.add("left-[-20%]");
-            })
-        }
-    })
+        link.classList.toggle("hidden");
+    });
+
+    links.forEach((link) => {
+        link.classList.toggle("justify-center");
+    });
+
+    img.forEach((image) => {
+        image.classList.toggle("sidebar-icon-collapsed");
+    });
+
+    indicator.forEach((div) => {
+        div.classList.toggle("left-[-20%]");
+    });
+
+    logo.classList.toggle("logo-collapsed");
 }
+// function sidebar() {
+//     const linksText = document.querySelectorAll(".sidebar span");
+//     const links = document.querySelector(".sidebar a");
+//     const sidebar = document.querySelector(".sidebar");
+//     const img = document.querySelectorAll(".sidebar a img");
+//     const indicator = document.querySelectorAll(".sidebar .indicator");
+//     linksText.forEach((link) => {
+//         if(link.classList.value.includes("hidden")){
+//             link.classList.remove("hidden");
+//             sidebar.classList.remove("w-[5%]");
+//             links.classList.remove("justify-center");
+//             indicator.forEach((div)=>{
+//                 div.classList.remove("left-[-20%]");
+//             })
+//         }else{
+//             link.classList.add("hidden");
+//             sidebar.classList.add("w-[5%]");
+//             links.classList.add("justify-center");
+//             indicator.forEach((div)=>{
+//                 div.classList.add("left-[-20%]");
+//             })
+//         }
+//     })
+// }
 
 function toggleAccountDropdown() {
     document.getElementById('accountDropdown').classList.toggle('hidden');
