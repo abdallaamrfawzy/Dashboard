@@ -208,30 +208,6 @@ function sidebar() {
 
     logo.classList.toggle("logo-collapsed");
 }
-// function sidebar() {
-//     const linksText = document.querySelectorAll(".sidebar span");
-//     const links = document.querySelector(".sidebar a");
-//     const sidebar = document.querySelector(".sidebar");
-//     const img = document.querySelectorAll(".sidebar a img");
-//     const indicator = document.querySelectorAll(".sidebar .indicator");
-//     linksText.forEach((link) => {
-//         if(link.classList.value.includes("hidden")){
-//             link.classList.remove("hidden");
-//             sidebar.classList.remove("w-[5%]");
-//             links.classList.remove("justify-center");
-//             indicator.forEach((div)=>{
-//                 div.classList.remove("left-[-20%]");
-//             })
-//         }else{
-//             link.classList.add("hidden");
-//             sidebar.classList.add("w-[5%]");
-//             links.classList.add("justify-center");
-//             indicator.forEach((div)=>{
-//                 div.classList.add("left-[-20%]");
-//             })
-//         }
-//     })
-// }
 
 function toggleAccountDropdown() {
     document.getElementById('accountDropdown').classList.toggle('hidden');
