@@ -14,10 +14,6 @@
     position: relative;
     left: 1px;
 }
-.nav-link img{
-    position: relative;
-    left: 1px;
-}
 
 .indicator.hidden {
     display: none;
@@ -35,7 +31,23 @@
     width: 20px;
     height: 17px;
 }
+.sidebar-collapsed .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.sidebar-collapsed .nav-link img {
+    margin: 0;
+}
+.sidebar-collapsed .nav-link.active img {
+    position: absolute;
+    left: 27% !important;
+}
+.sidebar-collapsed .nav-link .subscriptions{
+    position: relative;
+    right: 4px;
+}
 .logo-collapsed {
     width: 100px !important;
     position: relative;
