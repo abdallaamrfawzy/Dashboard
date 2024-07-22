@@ -149,7 +149,7 @@
                             <span id="currentLanguage">English</span>
                             <span class="material-icons-outlined">expand_more</span>
                         </div>
-                        <div id="languageDropdown" class="absolute right-0 mt-2 w-32 bg-white border rounded shadow-md hidden">
+                        <div id="languageDropdown" class="absolute right-0 mt-2 w-32 bg-white border rounded shadow-md hidden z-999">
                             <a href="#" class="flex items-center gap-2 p-2 hover:bg-gray-100" onclick="changeLanguage('Swedish', './assets/Swedish.png')">
                                 <img src="./assets/Swedish.png" alt="Swedish" class="h-4" />
                                 <span>Swedish</span>
@@ -168,7 +168,7 @@
                             <span class="block text-xs text-gray-500">Super Admin</span>
                         </div>
                         <span class="material-icons-outlined cursor-pointer" onclick="toggleAccountDropdown()">expand_more</span>
-                        <div id="accountDropdown" class="absolute right-2 top-10 w-32 bg-white border rounded shadow-md hidden">
+                        <div id="accountDropdown" class="absolute right-2 top-10 w-32 bg-white border rounded shadow-md hidden z-999">
                             <a href="#" class="block p-2 hover:bg-gray-100">Settings</a>
                             <a href="#" class="block p-2 hover:bg-gray-100">Logout</a>
                         </div>
@@ -236,7 +236,7 @@
                 
                     <!-- Total Portals Card -->
                     <div
-                        class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-full h-[161px]">
+                        class="bg-white p-4 shadow-md rounded-lg flex flex-col justify-between gap-4 w-full h-[161px] ">
                         <div class="flex items-center justify-between relative">
                             <div class="flex flex-col gap-[1rem]">
                                 <h2 class="text-[16px] text-[#202224]" data-i18n="totalPortals">Total Portals</h2>
