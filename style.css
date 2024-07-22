@@ -36,14 +36,16 @@
     justify-content: center;
     align-items: center;
 }
+.sidebar-collapsed .nav-link.active {
+    justify-content: center;
+    margin: 0 auto;
+    justify-self: center;
+}   
 
 .sidebar-collapsed .nav-link img {
     margin: 0;
 }
-.sidebar-collapsed .nav-link.active img {
-    position: absolute;
-    left: 30% !important;
-}
+
 .sidebar-collapsed .nav-link .subscriptions{
     position: relative;
     right: 15%;
