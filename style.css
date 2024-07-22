@@ -42,11 +42,11 @@
 }
 .sidebar-collapsed .nav-link.active img {
     position: absolute;
-    left: 27% !important;
+    left: 30% !important;
 }
 .sidebar-collapsed .nav-link .subscriptions{
     position: relative;
-    right: 4px;
+    right: 15%;
 }
 .logo-collapsed {
     width: 100px !important;
